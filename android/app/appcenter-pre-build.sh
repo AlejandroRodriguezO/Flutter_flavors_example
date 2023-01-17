@@ -22,9 +22,9 @@ echo "Installed flutter to `pwd`/flutter"
 # flutter build apk --debug
 # flutter build apk --profile
 if [ ${ENVIROMENT} == 'DEV' ];  then
-    flutter build apk --flavor free -t lib/main_free.dart
+    flutter build apk --flavor free -t lib/main_free.dart --ignore-deprecation
 else
-    flutter build apk --flavor full -t lib/main_full.dart
+    flutter build apk --flavor full -t lib/main_full.dart --ignore-deprecation
 fi
 
 echo "Finished "
